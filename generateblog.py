@@ -50,20 +50,21 @@ def updateindex(postfiles,output_dire):
             links += f'<li><a href = "{post_path}" >{title}</a></li>'
         
     content = INDEX_TEMPLATE.format(link = links)
-    with open(os.path.join(output_dire,'index.html'),'w') as f:
+    with open(output_dire,'w') as f:
             f.write(content)
     
 
 if __name__ == '__main__':
     posts = "D:\\Model\\my-blog\\myblog\\posts"
     output = "D:\\Model\\my-blog\\myblog\\output"
+    hpageadd = "D:\\Model\\my-blog\\myblog\\index.html"
 
     post_files = [os.path.join(posts, f) for f in os.listdir(posts) if f.endswith('.txt')]
 
     for f in post_files:
         generatepage(f,output)
     
-    updateindex(post_files,output)
+    updateindex(post_files,hpageadd)
 
     print("Blog updated successfully")
             
