@@ -47,7 +47,7 @@ def updateindex(postfiles,output_dire):
         post_path = os.path.splitext(os.path.basename(f))[0] + '.html'
         with open(f,'r') as fl:
             title = fl.readline().strip()
-            links += f'<li><a href = "{post_path}" >{title}</a></li>'
+            links += f'<li><a href = "//output + {post_path}" >{title}</a></li>'
         
     content = INDEX_TEMPLATE.format(link = links)
     with open(output_dire,'w') as f:
