@@ -9,7 +9,7 @@ HTML_TEMPLATE = '''
 <p>
 {content}
 </p>
-<a href="/">Back to HOME</a>
+<a href="../index.html">Back to HOME</a>
 </body>
 </head>
 
